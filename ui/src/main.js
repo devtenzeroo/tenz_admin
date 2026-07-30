@@ -1,10 +1,14 @@
-// Vue 3 + Vite entry (placeholder)
-// Purpose: implement the NUI frontend here. This file is a minimal starting point.
-
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from './router'
+import './index.css'
 
 const app = createApp(App)
+app.use(router)
 app.mount('#app')
 
-// Note: The UI build should output files into ui/dist. These files are then packaged into the resource.
+// NUI specific: ensure dark class is set based on localStorage preference
+const prefersDark = localStorage.getItem('tenz_admin_dark')
+if (prefersDark === 'true') {
+  document.documentElement.classList.add('dark')
+}
