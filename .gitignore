@@ -1,1 +1,23 @@
+# Ignore node_modules and build artifacts
+node_modules/
+ui/node_modules/
+ui/dist/
+
+# Ignore IDE files
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Lua rocks cache
+.rocks/
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
 
